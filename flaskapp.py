@@ -10,9 +10,7 @@ def index():
 @app.route('/random/<n>')
 def randomvalues(n):
     values = np.random.randint(0, 10, int(n))
-    print(values)
-    result = {'values': values.tolist()}
-
+    result = {'values' : values.tolist()}
     return jsonify(result)
 
 if __name__ == '__main__':
